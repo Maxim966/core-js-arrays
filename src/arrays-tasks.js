@@ -117,8 +117,14 @@ function findAllOccurrences(arr, item) {
  *    removeFalsyValues([ 1, 2, 3, 4, 5, 'false' ]) => [ 1, 2, 3, 4, 5, 'false' ]
  *    removeFalsyValues([ false, 0, NaN, '', undefined ]) => [ ]
  */
-function removeFalsyValues(/* arr */) {
-  throw new Error('Not implemented');
+function removeFalsyValues(arr) {
+  const array = arr.filter((item) => {
+    if (item !== 0 && !Number.isNaN(item)) {
+      return item;
+    }
+    return item;
+  });
+  return array;
 }
 
 /**
